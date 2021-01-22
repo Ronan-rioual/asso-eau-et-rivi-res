@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Faire un don {% endblock %}</h1>
+
+    <form method="post">
+        <div class="form-group">
+            <label for="title">Nom</label>
+            <input type="text" name="nom"
+                placeholder="Dujardin" class="form-control"
+                value="{{ request.form['nom'] }} " required autofocus></input>
+        </div>
+
+        <div class="form-group">
+            <label for="title">Prénom</label>
+            <input type="text" name="prenom"
+                placeholder="Martine" class="form-control"
+                value="{{ request.form['prenom'] }}" required></input>
+        </div>
+
+        <div class="form-group">
+            <label for="title">Adresse</label>
+            <input type="text" name="adresse"
+                placeholder="72 rue de Brest" class="form-control"
+                value="{{ request.form['adresse'] }}" required></input>
+        </div>
+
+        <div class="form-group">
+            <label for="title">E-mail</label>
+            <input type="email" name="mail"
+                placeholder="adresse@mail.fr" class="form-control"
+                value="{{ request.form['mail'] }}" required></input>
+        </div>
+
+        <div class="form-group">
+            <label for="content">Somme promise</label>
+            <input type="number" name="montant"
+                placeholder="€" class="form-control"
+                value="{{ request.form['montant'] }}" required></input>
+        </div>
+
+        <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" name="valider">
+            <label class="form-check-label" for="exampleCheck1">En cochant cette case, 
+                je reconnais avoir pris connaissance des Conditions Générales d'Utilisation du site 
+                ainsi que sa Politique de Confidentialité et je les accepte.
+                </label>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Valider</button>
+        </div>
+    </form>
+{% endblock %}

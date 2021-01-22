@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}  {% endblock %}
+
+{% block content %}
+    <h1>Liste des promesses de don</h1>
+
+    <h2>Total des dons :</h2>
+    <h1><span class="badge bg-success">{{total}} €</span></h1>
+    
+
+
+
+    {% for dons in don %}
+            <h2>{{ dons['nom'] }} {{ dons['prenom'] }}</h2>
+            <h3>Adresse : {{ dons['adresse']}}</h3>
+        </a>
+        <span class="badge badge-primary">montant</span>
+            <span class="badge badge-warning">{{ dons['montant'] }} €</span>
+        </a>
+        <hr>
+    {% endfor %}
+
+{% endblock %}

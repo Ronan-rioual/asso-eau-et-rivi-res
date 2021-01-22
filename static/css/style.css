@@ -1,0 +1,38 @@
+.bg-light {
+    background-color: rgba(73, 73, 173, 0.596) !important;
+}
+
+h2{
+    color: rgb(0, 0, 175);
+    font-size: 3rem !important;
+}
+
+h3{
+    color: rgb(0, 151, 88);
+    font-size: 20px;
+}
+
+h4{
+    font-size: 4rem;
+    text-align: center;
+    color: white;
+    margin-top: 15rem;
+}
+
+p{
+    font-size: 1.4rem;
+}
+
+li{
+    font-size: 1.2rem;
+}
+
+.card-text{
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.card-title{
+    font-weight: bold;    
+}
+
